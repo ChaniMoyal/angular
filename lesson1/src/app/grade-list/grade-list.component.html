@@ -1,0 +1,17 @@
+<h2>ציוני המקצועות</h2>
+
+<ul class="grade-list">
+  @for (grade of grades; track grade.subject) {
+    <li class="grade-item" [class.failed]="grade.score < 60" [class.passed]="grade.score >= 60">
+      <span class="subject">{{ grade.subject }}</span>
+      <span class="score">{{ grade.score }}</span>
+      <span class="status">{{ grade.score >= 60 ? 'עבר' : 'לא עבר' }}</span>
+    </li>
+  }
+</ul>
+
+<p class="average">
+  <strong>ממוצע הציונים:</strong>
+  <span>{{ average | number: '1.0-2' }}</span>
+</p>
+

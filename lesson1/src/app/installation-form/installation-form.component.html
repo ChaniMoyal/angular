@@ -1,0 +1,20 @@
+<div class="form-container">
+  <h2>כניסה להתקנת תוכנות לימודיות על המחשב</h2>
+
+  <label for="idNumber">מספר זהות</label>
+  <input
+    id="idNumber"
+    type="text"
+    [(ngModel)]="idNumber"
+    placeholder="הקלד מספר זהות"
+  />
+
+  <div class="terms-row">
+    <label for="terms">האם קראת ואישרת את התקנון</label>
+    <input id="terms" type="checkbox" [(ngModel)]="hasAcceptedTerms" />
+  </div>
+
+  <button type="button" [disabled]="!hasAcceptedTerms" (click)="submit()">
+    היכנס
+  </button>
+</div>
