@@ -1,0 +1,12 @@
+<article>
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.description }}</p>
+
+  <p>מחיר מקורי: {{ product.price }} ₪</p>
+  <p>הנחה: {{ discountAmount }} ₪</p>
+  <strong>מחיר לאחר הנחה: {{ priceAfterDiscount }} ₪</strong>
+
+  @if (discountAmount > 300) {
+    <p><strong>הנחה משתלמת</strong></p>
+  }
+</article>

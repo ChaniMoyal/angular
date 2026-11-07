@@ -1,0 +1,7 @@
+<main dir="rtl">
+  <h1>מוצרי חשמל</h1>
+
+  @for (product of products; track product.name) {
+    <app-product-item [product]="product"></app-product-item>
+  }
+</main>
