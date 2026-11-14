@@ -1,0 +1,19 @@
+<main dir="rtl">
+  <h1>קומפוננטת אב</h1>
+
+  <app-child
+    [name]="childName"
+  (greeted)="showGreeting($event)"
+  (timerStopped)="showTimerDuration($event)"
+  />
+
+<p>{{ greeting }}</p>
+
+<p>
+  {{
+    timerDuration === null
+      ? 'לחצי Start כדי להתחיל את הטיימר'
+      : 'הטיימר פעל ' + timerDuration + ' שניות'
+  }}
+</p>
+</main>

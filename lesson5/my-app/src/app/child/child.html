@@ -1,0 +1,10 @@
+<section>
+  <h2>קומפוננטת בן</h2>
+  <p>שלום, {{ name }}</p>
+  <p>הטיימר פעל: {{ elapsedSeconds }} שניות</p>
+
+  <button (click)="start()" [disabled]="startedAt !== null">Start</button>
+  <button (click)="stop()" [disabled]="startedAt === null">Stop</button>
+
+  <button (click)="sayHello()">שלח הודעה לאב</button>
+</section>
